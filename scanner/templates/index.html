@@ -4,74 +4,72 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>网站安全评级系统</title>
-  <link rel="stylesheet" href="./css/layui.css">
+  <link rel="stylesheet" href="../static/css/layui.css">
+  <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
   <div class="layui-header">
-    <img src="images/zzz.png" width="2%" style="float: left;margin-top: 10px;margin-left: 5px">
+    <img src="../static/images/zzz.png" width="2%" style="float: left;margin-top: 10px;margin-left: 5px">
     <div class="layui-logo">网站安全评级系统</div>
   </div>
-  
-  <div class="layui-side layui-bg-black">
-    <div class="layui-side-scroll">
-      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
-      <ul class="layui-nav layui-nav-tree"  lay-filter="test">
-        <li class="layui-nav-item layui-nav-itemed">
-          <a class="" href="javascript:;">扫描器功能</a>
-          <dl class="layui-nav-child">
-                <dd><a data-type="tabAdd">在线cms识别</a></dd>
-                <dd><a data-type="tabAdd">poc漏洞检测</a></dd>
-                <dd><a data-type="tabAdd">文件后台扫描</a></dd>
-                <dd><a data-type="tabAdd">端口功能判断</a></dd>
-          </dl>
+  </div>
+  <div class="layui-side layui-bg-black" id="admin-side" style="margin-top:3.8%">
+    <div class="layui-side-scroll" id="admin-navbar-side" lay-filter="side"></div>
+  </div>
+  <div class="layui-body" style="bottom: 0;border-left: solid 2px #1AA094;" id="admin-body">
+    <div class="layui-tab admin-nav-card layui-tab-brief" lay-filter="admin-tab"style="margin-top:4.5%">
+      <ul class="layui-tab-title">
+        <li class="layui-this">
+          <cite>在线cms识别</cite>
         </li>
-        <li class="layui-nav-item"><a href="">网站扫描管理</a></li>
-        <li class="layui-nav-item"><a href="">网站评级功能</a></li>
       </ul>
-    </div>
-  </div>
-  
-  <div class="layui-body" style="height: 87%">
-    <!-- 内容主体区域 -->
-    <div class="layui-tab admin-nav-card layui-tab-brief" lay-filter="admin-tab" style="height:92%">
-        <ul class="layui-tab-title">
-            <li class="layui-this">
-                <i class="fa fa-dashboard" aria-hidden="true"></i>
-                <!-- <h4>在线cms识别</h4> -->
-                <!-- <h4>poc漏洞检测</h4> -->
-                <!-- <h4>文件后台扫描</h4> -->
-                <!-- <h4>端口信息扫描</h4> -->
-                <!-- <h4>网站扫描管理</h4> -->
-                <h4>网站评级功能</h4>
-            </li>
-        </ul>
-        <div class="layui-tab-content" style="padding:0;height:100%;width:100%;overflow: hidden;">
-            <div class="layui-tab-item layui-show" style="height: 100%">
-                <!-- <iframe style="width: 100%;height:100%" src="ControlPanel.html"></iframe> -->
-                <!-- <iframe style="width: 100%;height:100%" src="CompileCMS.html"></iframe> -->
-                <!-- <iframe style="width: 100%;height:100%" src="file.html"></iframe> -->
-                <!-- <iframe style="width: 100%;height:100%" src="Weak.html"></iframe> -->
-                <!-- <iframe style="width: 100%;height:100%" src="manager.html"></iframe> -->
-                <iframe style="width: 100%;height:100%" src="JudgeRank.html"></iframe>
-            </div>
+      <div class="layui-tab-content">
+        <div class="layui-tab-item layui-show">
+          <iframe src="/onlineCMS"></iframe>
         </div>
+      </div>
     </div>
-    <!-- <div style="padding: 15px;">内容主体区域</div> -->
   </div>
-  
-  <div class="layui-footer">
-    <!-- 底部固定区域 -->
-    © Gingio团队作品
+  <div class="layui-footer footer footer-demo" id="admin-footer">
+    <div class="layui-main">
+      <p>2019 &copy;
+        <a href="#">Ginkgoi团队作品</a>
+      </p>
+    </div>
   </div>
 </div>
-<script src="layui.js"></script>
-<script>
+<script src="../static/layui.js"></script>
+<script type="text/javascript">
+  var navs = [{
+                "title": "扫描器功能",
+                "spread": false,
+                "children": [
+                {"title": "在线cms识别","href": "/onlineCMS"},
+                {"title": "poc漏洞检测","href": "/CompileCMS"},
+                {"title": "文件后台扫描","href": "/filescan"},
+                {"title": "端口功能判断","href": "/Portscan"}
+                ]
+              },
+              {
+                "title": "网站扫描管理",
+                "href": "/Manager",
+                "spread": false
+              },
+              {
+                "title": "网站评级功能",
+                "href": "/JudgeRank",
+                "spread": false
+              },
+          ];
+</script>
+<script src="../static/js/index.js"></script>
+<!-- <script>
 //JavaScript代码区域
 layui.use('element', function(){
   var element = layui.element;
   
 });
-</script>
+</script> -->
 </body>
 </html>

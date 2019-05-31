@@ -12,7 +12,7 @@ def index():
 
 @app.route('/JudgeRank',methods=['get','post'])
 def JudgeRank():
-
+    return render_template('JudgeRank.html')
 
 #路由
 @app.route('/onlineCMS', methods=['get', 'post'])
@@ -39,9 +39,9 @@ def file_scan():
 def cms_scan():
     return render_template('CompileCMS.html', title='cms安全检测', data=Markup(list(plugins.angelsword['compileCMSdict'].keys())))
 
-@app.route('/Weakscan')
+@app.route('/Portscan')
 def Weak_scan():
-    return render_template('WeakScan.html', title='弱口令扫描', data=Markup(list(plugins.angelsword['WeakScandict'].keys())))
+    return render_template('PortScan.html', title='弱口令扫描', data=Markup(list(plugins.angelsword['WeakScandict'].keys())))
 
 
 # 会话控制

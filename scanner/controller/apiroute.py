@@ -73,7 +73,7 @@ def cms_api():
     return jsonify({"status": cmsexp_poc_status, "pocresult": cmsexp_poc_result})
 
 #弱口令扫描 /plugins/weakScan
-@api.route('/Weakscan', methods=['post'])
+@api.route('/Portscan', methods=['post'])
 def WeakScan_api():
     # 获取前端传入的json数据
     Weakscan_load = getjson()
