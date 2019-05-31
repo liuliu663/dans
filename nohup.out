@@ -1,0 +1,546 @@
+::ffff:127.0.0.1 - - [2019-03-23 16:42:59] "GET / HTTP/1.1" 200 4156 0.010980
+::ffff:127.0.0.1 - - [2019-03-23 16:42:59] "GET /favicon.ico HTTP/1.1" 404 341 0.001530
+::ffff:192.168.179.1 - - [2019-03-23 16:43:30] "GET / HTTP/1.1" 200 4156 0.001326
+::ffff:192.168.179.1 - - [2019-03-23 16:43:31] "GET /favicon.ico HTTP/1.1" 404 341 0.000468
+::ffff:192.168.179.1 - - [2019-03-23 18:18:27] "GET / HTTP/1.1" 200 4156 0.034191
+::ffff:192.168.179.1 - - [2019-03-23 18:18:43] "GET / HTTP/1.1" 200 4153 0.024122
+::ffff:192.168.179.1 - - [2019-03-23 18:19:45] "GET /whatcms HTTP/1.1" 200 5756 0.019663
+::ffff:192.168.179.1 - - [2019-03-23 18:19:52] "GET /whatcms HTTP/1.1" 200 5756 0.002085
+::ffff:192.168.179.1 - - [2019-03-23 18:19:53] "GET /getdomain HTTP/1.1" 200 8099 0.006929
+::ffff:192.168.179.1 - - [2019-03-23 18:19:59] "GET /getdomain HTTP/1.1" 200 8099 0.001928
+::ffff:192.168.179.1 - - [2019-03-23 18:20:26] "GET /whatcms HTTP/1.1" 200 5756 0.001146
+::ffff:192.168.179.1 - - [2019-03-23 18:20:29] "GET /getdomain HTTP/1.1" 200 8099 0.002705
+::ffff:192.168.179.1 - - [2019-03-23 18:20:31] "GET /cms HTTP/1.1" 200 17814 0.012160
+::ffff:192.168.179.1 - - [2019-03-23 18:20:36] "GET /subdomain HTTP/1.1" 200 6832 0.004060
+::ffff:192.168.179.1 - - [2019-03-23 18:20:37] "GET /nmap HTTP/1.1" 200 5529 0.002774
+::ffff:192.168.179.1 - - [2019-03-23 18:20:57] "GET /jsfuck HTTP/1.1" 200 6044 0.006338
+::ffff:192.168.179.1 - - [2019-03-23 18:21:01] "GET /industrial HTTP/1.1" 200 7047 0.003278
+::ffff:192.168.179.1 - - [2019-03-23 18:21:03] "GET /information HTTP/1.1" 200 6944 0.006830
+::ffff:192.168.179.1 - - [2019-03-23 18:21:04] "GET /hardware HTTP/1.1" 200 7300 0.004922
+::ffff:192.168.179.1 - - [2019-03-23 18:21:05] "GET /system HTTP/1.1" 200 8349 0.008296
+::ffff:192.168.179.1 - - [2019-03-23 18:21:07] "GET /cms HTTP/1.1" 200 17814 0.001292
+::ffff:192.168.179.1 - - [2019-03-23 18:21:08] "GET /getdomain HTTP/1.1" 200 8099 0.002068
+::ffff:192.168.179.1 - - [2019-03-23 18:21:25] "GET /search HTTP/1.1" 200 23471 0.007151
+::ffff:192.168.179.1 - - [2019-03-23 18:21:52] "GET /login HTTP/1.1" 200 2545 0.006626
+::ffff:192.168.179.1 - - [2019-03-23 18:21:52] "GET /static/css/style.css HTTP/1.1" 200 3024 0.060708
+::ffff:192.168.179.1 - - [2019-03-23 18:21:52] "GET /static/js/index.js HTTP/1.1" 200 1291 0.002415
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/default.py", line 508, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: users
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/gevent/pywsgi.py", line 975, in handle_one_response
+    self.run_application()
+  File "/usr/local/lib/python3.6/dist-packages/gevent/pywsgi.py", line 922, in run_application
+    self.result = self.application(self.environ, self.start_response)
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.6/dist-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.6/dist-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/mandarava/Desktop/onlinetools/scanner/controller/publicview.py", line 92, in reg
+    User(username,password).commit()
+  File "/home/mandarava/Desktop/onlinetools/scanner/model/user.py", line 22, in commit
+    db_session.commit()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/session.py", line 943, in commit
+    self.transaction.commit()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/session.py", line 467, in commit
+    self._prepare_impl()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/session.py", line 447, in _prepare_impl
+    self.session.flush()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/session.py", line 2254, in flush
+    self._flush(objects)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/session.py", line 2380, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/compat.py", line 187, in reraise
+    raise value
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/session.py", line 2344, in _flush
+    flush_context.execute()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/unitofwork.py", line 391, in execute
+    rec.execute(self)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/unitofwork.py", line 556, in execute
+    uow
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/persistence.py", line 181, in save_obj
+    mapper, table, insert)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/persistence.py", line 866, in _emit_insert_statements
+    execute(statement, params)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/sql/elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 1200, in _execute_context
+    context)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/compat.py", line 186, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/default.py", line 508, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: users [SQL: 'INSERT INTO users (name, passwd, token, target) VALUES (?, ?, ?, ?)'] [parameters: ('admin', 'admin', '747d9ba59e47b5864ab8a32b9b4b281b', '[]')] (Background on this error at: http://sqlalche.me/e/e3q8)
+2019-03-23T10:22:06Z {'REMOTE_ADDR': '::ffff:192.168.179.1', 'REMOTE_PORT': '62684', 'HTTP_HOST': '192.168.179.136:8000', (hidden keys: 28)} failed with OperationalError
+
+::ffff:192.168.179.1 - - [2019-03-23 18:22:06] "POST /reg HTTP/1.1" 500 161 0.140401
+::ffff:192.168.179.1 - - [2019-03-23 18:22:10] "GET / HTTP/1.1" 200 4153 0.001810
+::ffff:192.168.179.1 - - [2019-03-23 18:22:36] "GET /reg HTTP/1.1" 200 2545 0.001464
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/default.py", line 508, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: users
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/gevent/pywsgi.py", line 975, in handle_one_response
+    self.run_application()
+  File "/usr/local/lib/python3.6/dist-packages/gevent/pywsgi.py", line 922, in run_application
+    self.result = self.application(self.environ, self.start_response)
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.6/dist-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.6/dist-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/mandarava/Desktop/onlinetools/scanner/controller/publicview.py", line 92, in reg
+    User(username,password).commit()
+  File "/home/mandarava/Desktop/onlinetools/scanner/model/user.py", line 22, in commit
+    db_session.commit()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/session.py", line 943, in commit
+    self.transaction.commit()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/session.py", line 467, in commit
+    self._prepare_impl()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/session.py", line 447, in _prepare_impl
+    self.session.flush()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/session.py", line 2254, in flush
+    self._flush(objects)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/session.py", line 2380, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/compat.py", line 187, in reraise
+    raise value
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/session.py", line 2344, in _flush
+    flush_context.execute()
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/unitofwork.py", line 391, in execute
+    rec.execute(self)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/unitofwork.py", line 556, in execute
+    uow
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/persistence.py", line 181, in save_obj
+    mapper, table, insert)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/orm/persistence.py", line 866, in _emit_insert_statements
+    execute(statement, params)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/sql/elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 1200, in _execute_context
+    context)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/util/compat.py", line 186, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/base.py", line 1193, in _execute_context
+    context)
+  File "/usr/local/lib/python3.6/dist-packages/sqlalchemy/engine/default.py", line 508, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: users [SQL: 'INSERT INTO users (name, passwd, token, target) VALUES (?, ?, ?, ?)'] [parameters: ('ahahah', 'asdfgh', '3a7b4b8d5736c3b477d4311ab44ec302', '[]')] (Background on this error at: http://sqlalche.me/e/e3q8)
+2019-03-23T10:22:49Z {'REMOTE_ADDR': '::ffff:192.168.179.1', 'REMOTE_PORT': '62790', 'HTTP_HOST': '192.168.179.136:8000', (hidden keys: 28)} failed with OperationalError
+
+::ffff:192.168.179.1 - - [2019-03-23 18:22:49] "POST /reg HTTP/1.1" 500 161 0.039897
+::ffff:192.168.179.1 - - [2019-03-23 18:22:52] "GET / HTTP/1.1" 200 4153 0.001066
+::ffff:192.168.179.1 - - [2019-03-23 18:24:00] "GET /home HTTP/1.1" 404 341 0.002994
+::ffff:192.168.179.1 - - [2019-03-23 18:24:19] "GET /information HTTP/1.1" 200 6944 0.004636
+::ffff:192.168.179.1 - - [2019-03-23 18:30:09] "GET /filescan HTTP/1.1" 404 341 0.000597
+::ffff:192.168.179.1 - - [2019-03-23 18:32:33] "GET /filescan HTTP/1.1" 404 341 0.000696
+::ffff:192.168.179.1 - - [2019-03-23 18:32:34] "GET /filescan HTTP/1.1" 404 341 0.000533
+::ffff:192.168.179.1 - - [2019-03-23 18:32:35] "GET /filescan HTTP/1.1" 404 341 0.001195
+::ffff:192.168.179.1 - - [2019-03-23 18:51:16] "GET / HTTP/1.1" 200 4138 0.018332
+::ffff:192.168.179.1 - - [2019-03-23 18:51:20] "GET /getdomain HTTP/1.1" 200 8096 0.003001
+::ffff:192.168.179.1 - - [2019-03-23 18:51:27] "GET /whatcms HTTP/1.1" 200 5753 0.002502
+::ffff:192.168.179.1 - - [2019-03-23 18:51:34] "GET /cms HTTP/1.1" 200 17811 0.007721
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.029392
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.001258
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.002985
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.001926
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.001125
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.004462
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.002198
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.003229
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.001901
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.002360
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.001196
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.001444
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.001410
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.005419
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.002634
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.001946
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.001636
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.001765
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.001686
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.001150
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.001369
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.000989
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.000723
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.001756
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.002864
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.003549
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.002335
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.001284
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.001425
+::ffff:192.168.179.1 - - [2019-03-23 18:51:40] "POST /api/cms HTTP/1.1" 200 164 0.001431
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.005267
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.006004
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.001808
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.000700
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.002358
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.001366
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.001525
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.002477
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.003325
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.003008
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.003861
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/gevent/pywsgi.py", line 975, in handle_one_response
+    self.run_application()
+  File "/usr/local/lib/python3.6/dist-packages/gevent/pywsgi.py", line 922, in run_application
+    self.result = self.application(self.environ, self.start_response)
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.6/dist-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.6/dist-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/mandarava/Desktop/onlinetools/scanner/controller/apiroute.py", line 88, in cms_api
+    system_poc_status = 1
+  File "/home/mandarava/Desktop/onlinetools/scanner/plugins/cms/live800/live800_services_xxe.py", line 46, in run
+    for vulnurl in vulnurls:
+TypeError: 'NoneType' object is not iterable
+2019-03-23T10:51:41Z {'REMOTE_ADDR': '::ffff:192.168.179.1', 'REMOTE_PORT': '65419', 'HTTP_HOST': '192.168.179.136:8000', (hidden keys: 27)} failed with TypeError
+
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 500 161 0.004168
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.001000
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.001180
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.001066
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.001961
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.004874
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.002878
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.002086
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.001774
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.001271
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.002290
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.001264
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.067652
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.013674
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.002405
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.002466
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.001532
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.002191
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.002240
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.001771
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.003191
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.001864
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.000787
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.000715
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.001004
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.003336
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.000963
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.000748
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.000701
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.002350
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.001417
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.005790
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.001318
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.004098
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.001782
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.002168
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 156 0.000733
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.000923
+::ffff:192.168.179.1 - - [2019-03-23 18:51:41] "POST /api/cms HTTP/1.1" 200 164 0.003610
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.007490
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.000924
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.005641
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.007223
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.002455
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.001520
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.002400
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.006515
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.001049
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.000829
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.000878
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.000904
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.001459
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.001262
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.003051
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.001076
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.000962
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.000790
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.000757
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.000838
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.001624
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.000781
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.000890
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.000943
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.000962
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.001230
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.002584
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.001331
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.004045
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.001084
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.001558
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.001021
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.004639
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.001185
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.001216
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.002733
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.001620
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.001074
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.008260
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.001707
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.001059
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.001025
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.001028
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.003428
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.002970
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.001138
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.001181
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.000984
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.003554
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.003561
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.002805
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.001776
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.001926
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.002290
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.001138
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.002356
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.002044
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.000982
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.001115
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.001727
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.001467
+::ffff:192.168.179.1 - - [2019-03-23 18:51:42] "POST /api/cms HTTP/1.1" 200 164 0.001294
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.002654
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.003003
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.002111
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001652
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.003154
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001344
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001843
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.002039
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001106
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001549
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.002656
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.000978
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001362
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001896
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.007899
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001193
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.003626
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.002251
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.005091
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001267
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.012705
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.002114
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001383
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.002134
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001628
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001367
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001989
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.000989
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.000731
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.000915
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001728
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.002625
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001056
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.000793
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.000709
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001697
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.000950
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.000964
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001248
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.002757
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.000896
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001674
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.000881
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.013310
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001077
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001425
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.002481
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001849
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.004039
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.018268
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.003207
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.003993
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.000988
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001295
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001413
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001519
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001032
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001994
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001388
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.003801
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001098
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.000951
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.002302
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.003629
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001207
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.001153
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.004127
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.000863
+::ffff:192.168.179.1 - - [2019-03-23 18:51:43] "POST /api/cms HTTP/1.1" 200 164 0.000789
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.001298
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.002017
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.001117
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.002027
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.002959
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.001208
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.008245
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.001499
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.010400
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.001344
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.004299
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.001426
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.000718
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.000628
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.003320
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.018494
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.001184
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.000847
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.002784
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.001813
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.000967
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.000854
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.001518
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.001062
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.004050
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.000792
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.014785
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.016682
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.002397
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.001550
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.001508
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.003710
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.001143
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.001779
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.003339
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.001677
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.005711
+::ffff:192.168.179.1 - - [2019-03-23 18:51:44] "POST /api/cms HTTP/1.1" 200 164 0.002187
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/gevent/pywsgi.py", line 975, in handle_one_response
+    self.run_application()
+  File "/usr/local/lib/python3.6/dist-packages/gevent/pywsgi.py", line 922, in run_application
+    self.result = self.application(self.environ, self.start_response)
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.6/dist-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.6/dist-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.6/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/mandarava/Desktop/onlinetools/scanner/controller/apiroute.py", line 88, in cms_api
+    system_poc_status = 1
+  File "/home/mandarava/Desktop/onlinetools/scanner/plugins/cms/zfsoft/zfsoft_default3_bruteforce.py", line 26, in run
+    tmpurl = str(req.url)
+UnboundLocalError: local variable 'req' referenced before assignment
+2019-03-23T10:51:44ZTraceback (most recent call last):
+  File "main.py", line 5, in <module>
+    from scanner.app import app
+  File "/home/mandarava/Desktop/onlinetools/scanner/app.py", line 9, in <module>
+    from .pluginloader import *
+  File "/home/mandarava/Desktop/onlinetools/scanner/pluginloader.py", line 6, in <module>
+    from .plugins.filescan.filescanmain import *
+ModuleNotFoundError: No module named 'scanner.plugins.filescan.filescanmain'
+Traceback (most recent call last):
+  File "main.py", line 5, in <module>
+    from scanner.app import app
+  File "/home/mandarava/Desktop/onlinetools/scanner/app.py", line 9, in <module>
+    from .pluginloader import *
+  File "/home/mandarava/Desktop/onlinetools/scanner/pluginloader.py", line 6, in <module>
+    from .plugins.filescan.filescanmain import *
+ModuleNotFoundError: No module named 'scanner.plugins.filescan.filescanmain'
+Traceback (most recent call last):
+  File "main.py", line 5, in <module>
+    from scanner.app import app
+  File "/home/mandarava/Desktop/onlinetools/scanner/app.py", line 9, in <module>
+    from .pluginloader import *
+  File "/home/mandarava/Desktop/onlinetools/scanner/pluginloader.py", line 6, in <module>
+    from .plugins.filescan.filescanmain import *
+ModuleNotFoundError: No module named 'scanner.plugins.filescan.filescanmain'

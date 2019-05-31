@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/layui.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- <div> -->
+        <!-- <h1>About:</h1>
+        <h4><br>team:<br><br>tel:15601097855</h4></h1> -->
+    <!-- </div> -->
+    <div style="padding: 20px; ">
+        <div class="layui-row layui-col-space15">
+            <div class="layui-col-md12">
+                <div class="layui-card">
+                    <!-- <div class="layui-card-header">标题</div> -->
+                    <div class="layui-card-body">
+                        <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+                            <legend>端口功能判断</legend>
+                        </fieldset>
+                        <div class="layui-row">
+                            <div class="layui-col-md8 layui-col-md-offset2">
+                                <form class="layui-form layui-form-pane " action="">
+                                    <div class="layui-form-item layui-input-inline" style="width: 80%">
+                                        <input type="text" name="title" autocomplete="off"  placeholder="请输入标题" class="layui-input">
+                                    </div>
+                                    <div class="layui-form-item layui-input-inline">
+                                        <button class="layui-btn" lay-submit="" lay-filter="demo2">扫描</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md12">
+                <div class="layui-card">
+                    <div class="layui-card-body">
+                        <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+                            <legend>扫描进度：100%==>扫描已完成</legend>
+                        </fieldset>
+                        <div class="layui-progress layui-progress-big" lay-showpercent="true">
+                            <div class="layui-progress-bar" lay-percent="100%"></div>
+                        </div>
+                        <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+                            <legend>扫描结果</legend>
+                        </fieldset>
+                        <table class="layui-table" lay-even="" lay-skin="row">
+                            <colgroup>
+                                <col width="150">
+                                <col width="150">
+                                <col width="200">
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                <th>#</th>
+                                <th>检测端口</th>
+                                <th>端口服务</th>
+                                <th>端口状态</th>
+                                <th>端口安全性</th>
+                                <th>具体情况</th>
+                                </tr> 
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>1</td>
+                                <td>3389端口</td>
+                                <td>telnet</td>
+                                <td>开启</td>
+                                <td>安全性低</td>
+                                <td>弱口令admin:123456789</td>
+                                </tr>
+                                <tr>
+                                <td>2</td>
+                                <td>21端口</td>
+                                <td>ftp</td>
+                                <td>开启</td>
+                                <td>安全性低</td>
+                                <td>登录用户密码为弱口令uftp:uftp</td>
+                                </tr>
+                                <tr>
+                                <td>3</td>
+                                <td>139端口</td>
+                                <td>netbios-ssn</td>
+                                <td>开启</td>
+                                <td>安全性低</td>
+                                <td>-</td>
+                                </tr>
+                                <tr>
+                                <td>4</td>
+                                <td>1027端口</td>
+                                <td>IIS</td>
+                                <td>开启</td>
+                                <td>安全性中</td>
+                                <td>-</td>
+                                </tr>
+                                <tr>
+                                <td>5</td>
+                                <td>1029端口</td>
+                                <td>ms-lsa</td>
+                                <td>开启</td>
+                                <td>安全性中</td>
+                                <td>-</td>
+                                </tr>
+                                <tr>
+                                <td>5</td>
+                                <td>1433端口</td>
+                                <td>ms-sql-s</td>
+                                <td>开启</td>
+                                <td>安全性中</td>
+                                <td>-</td>
+                                </tr>
+                                <tr>
+                                <td>5</td>
+                                <td>6001端口</td>
+                                <td>X11:1</td>
+                                <td>开启</td>
+                                <td>安全性中</td>
+                                <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="layui.js"></script>
+    <script>
+    //JavaScript代码区域
+    layui.use('element', function(){
+    var element = layui.element;
+    
+    });
+    </script> 
+</body>
+</html>

@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="main">
+    <div class="row">
+		<div class="col-md-12">
+			<h1 class="text-wrap">
+				文件目录扫描
+			</h1>
+		</div>
+	</div>
+    <div class="row">
+		<div class="col-lg-12">
+			<div class="input-group input-group-lg">
+				<input type="text" id="url" class="form-control" aria-label="..." name="url">
+				<div class="input-group-btn">
+					<button type="button" id="filescan" class="btn btn-info btn-lg search-btn" aria-haspopup="true" aria-expanded="false"><b>检测</b></button>
+				</div>
+			</div>
+		</div>
+    </div>
+    <div class="row main-panel">
+        <div class="col-md-1"></div>
+			<div class="col-md-10">
+				<div id="color" class="panel panel-primary">
+					<div class="panel-heading" id="result">
+						结果：
+					</div>
+                </div>
+            </div>
+		</div>
+		<div class="row">
+			<div class="col-md-10">
+				<div class="text-wrap">
+					<div class="btn-group" role="group" aria-label="First group" id='first'>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript">
+    var filescanapi="/api/filescan";
+    var url=$('#url').val();
+	type = 0
+
+//加载每一页的后台目录
+function page_r(page1){
+	$.post('/api/page',JSON.stringify({"page":page1}),function (result){
+		var str = ''
+		for(var i = 0;i<result.url.length;i++){
+			if(result.status[i]==200){
+				str+='<li class="list-group-item"><span class="text-success" style="color:#23b126">[200 OK]================>'+
+				result.url[i]+'</span></li>'
+			}else if(result.status[i]==301){
+				str+='<li class="list-group-item"><span class="text-primary" style="color:#b9b3b3">[301]================>'+
+				result.url[i]+'</span></li>'
+			}
+		}
+		$('#poc').empty()
+		$('#poc').append(str)
+		var strss='';
+		if(page1==1){
+			strs = '<button type="button" class="btn btn-default page" href="1"  disabled="disabled" style="background-color: #e6e6e6;border-color: #adadad;" >首页</button>'
+		}else{
+			strss = '<button type="button" class="btn btn-default page" href="1" >首页</button>'
+		}
+		for(var j = 1;j<result.page+1;j++){
+			if(j==page1){
+				strss+='<button type="button" class="btn btn-default page" href="'+j+'"  disabled="disabled" style="background-color: #e6e6e6;border-color: #adadad;" >'+j+'</button>'
+			}else{
+				strss+='<button type="button" class="btn btn-default page" href="'+j+'" >'+j+'</button>'
+			}
+		}
+		if(page1==(j-1)){
+			strss+= '<button type="button" class="btn btn-default page" href="'+(j-1)+'"  disabled="disabled" style="background-color: #e6e6e6;border-color: #adadad;" >尾页</button>'
+		}else{
+			strss+='<button type="button" class="btn btn-default page" href="'+(j-1)+'" >尾页</button>'
+		}
+		$('#first').empty();
+		$('#first').append(strss);
+		$('.page').click(function(){
+			var page1 = $(this).attr('href');
+			page_r(page1);
+    	});
+	},'json')
+}
+
+//加载第一页的目录
+function request(url,page){
+	$.post(filescanapi,JSON.stringify({"url":url,"type":type,"page":page}),function (results){
+		var str = ''
+		for(var i = 0;i<results.url.length;i++){
+			if(results.status[i]==200){
+				str+='<li class="list-group-item"><span class="text-success" style="color:#23b126">[200 OK]================>'+
+				results.url[i]+'</span></li>'
+			}else if(results.status[i]==301){
+				str+='<li class="list-group-item"><span class="text-primary" style="color:#b9b3b3">[301]================>'+
+				results.url[i]+'</span></li>'
+			}
+		}
+		$('#poc').empty()
+		$('#poc').append(str)
+		var strss='';
+		if(page==1){
+			strss= '<button type="button" class="btn btn-default page" href="1"  disabled="disabled" style="background-color: #e6e6e6;border-color: #adadad;" >首页</button>'
+		}else{
+			strss = '<button type="button" class="btn btn-default page" href="1" >首页</button>'
+		}
+		for(var j = 1;j<results.page+1;j++){
+			if(j==page){
+				strss+='<button type="button" class="btn btn-default page" href="'+j+'"  disabled="disabled" style="background-color: #e6e6e6;border-color: #adadad;" >'+j+'</button>'
+			}else{
+				strss+='<button type="button" class="btn btn-default page" href="'+j+'" >'+j+'</button>'
+			}
+		}
+		if(page==(j-1)){
+			strss+= '<button type="button" class="btn btn-default page" href="'+(j-1)+'"  disabled="disabled" style="background-color: #e6e6e6;border-color: #adadad;" >尾页</button>'
+		}else{
+			strss+='<button type="button" class="btn btn-default page" href="'+(j-1)+'" >尾页</button>'
+		}
+		$('#first').empty();
+		$('#first').append(strss);
+		$('.page').click(function(){
+			var page1 = $(this).attr('href');
+			page_r(page1);
+		});
+	},"json");
+}
+$(function() {
+    $('#filescan').click(function() {
+        if(urlcheck()){//循环dict，循环识别，字典在/scanner/pluginloader.py
+        	poclist='<div class="panel-heading" id="result">结果：</div>'
+			poclist+='<ul class="list-group" id="poc"><li class="list-group-item"><span class="text-primary">正在检测'
+				+'</span></li></ul>'
+			$('#color').html(poclist)
+			var page = 1;
+			request(url,page)
+    }
+	});
+})
+</script>
+{% endblock %}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/layui.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- <div> -->
+        <!-- <h1>About:</h1>
+        <h4><br>team:<br><br>tel:15601097855</h4></h1> -->
+    <!-- </div> -->
+    <div style="padding: 20px; ">
+        <div class="layui-row layui-col-space15">
+            <div class="layui-col-md12">
+                <div class="layui-card">
+                    <div class="layui-card-body" style="height:500px">
+                        <div class="layui-col-md3" style="margin-top:10%;margin-bottom: 6%;padding-left: 3%">
+                            <i class="layui-icon layui-icon-tips" style="font-size: 200px; color: #FF5722;"></i> <br />
+                            <h3 style="margin-top:10%;">网站<span style="color: #FF5722;">127.0.0.1</span>的网站评级</h3>
+                            <h3>网站安全类型为<span style="color: #FF5722;">D类</span></h3>
+                            <h3>您的网站安全性较<span style="color: #FF5722;">低</span>，请根据漏洞下载补丁！</h3>
+							<br />
+							<button class="layui-btn" lay-submit="" lay-filter="demo2">下载网站修复报告</button>
+                        </div>
+                        <div class="layui-col-md9">
+                            <table class="layui-table" lay-even="" lay-skin="row">
+                                <colgroup>
+                                    <col width="50">
+                                    <col width="300">
+                                    <col width="50">
+                                    <col>
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                    <th>#</th>
+                                    <th>相关漏洞</th>
+                                    <th>危险系数</th>
+                                    </tr> 
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    <td>1</td>
+                                    <td>publish.php任意文件删除漏洞</td>
+                                    <td>中</td>
+                                    </tr>
+                                    <tr>
+                                    <td>2</td>
+                                    <td>user.php任意文件删除漏洞</td>
+                                    <td>中</td>
+                                    </tr>
+                                    <tr>
+                                    <td>3</td>
+                                    <td>guest_book注入</td>
+                                    <td>中</td>
+                                    </tr>
+                                    <tr>
+                                    <td>4</td>
+                                    <td>任意文件删除漏洞导致重装getshell&xss漏洞/td>
+                                    <td>中</td>
+                                    </tr>
+                                    <!--<tr>
+                                        <td>5</td>
+                                        <td>3389端口存在弱口令登陆</td>
+                                        <td>中</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>21端口存在弱口令登陆</td>
+                                        <td>中</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>文件敏感目录扫描结果较多</td>
+                                        <td>中</td>
+                                    </tr>-->
+                                    <tr>
+                                    <td>5</td>
+                                    <td>/admin/login.php SQL注入漏洞</td>
+                                    <td>中</td>
+                                    </tr>
+                                    <tr>
+                                    <td>6</td>
+                                    <td>ad_js.php ad_id 参数SQL注入漏洞</td>
+                                    <td>中</td>
+                                    </tr>
+                                    <tr>
+                                    <td>7</td>
+                                    <td> /admin/tpl_manage.php 本地文件包含漏洞</td>
+                                    <td>中</td>
+                                    </tr>
+                                    <tr>
+                                    <td>8</td>
+                                    <td>include-common.func.php SQL注入漏洞</td>
+                                    <td>高</td>
+                                    </tr> -->
+                                    <<tr>
+                                    <td>9</td>
+                                    <td>$_SERVER注射漏洞</td>
+                                    <td>高</td>
+                                    </tr>
+                                    <tr>
+                                    <td>10</td>
+                                    <td>bluecms v1.0 图片上传绕过漏洞</td>
+                                    <td>高</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div id="demo0" style="float:right">
+							<div class="layui-box layui-laypage layui-laypage-default" id="layui-laypage-1">
+							<a href="javascript:;" class="layui-laypage-prev layui-disabled" data-page="0">上一页</a>
+							<span class="layui-laypage-curr"><em class="layui-laypage-em"></em><em>1</em></span>
+							<a href="javascript:;" data-page="2">2</a>
+							<a href="javascript:;" class="layui-laypage-next" data-page="2">下一页</a></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="layui.js"></script>
+    <script>
+    //JavaScript代码区域
+    layui.use('element', function(){
+    var element = layui.element;
+    
+    });
+    </script> 
+</body>
+</html>
